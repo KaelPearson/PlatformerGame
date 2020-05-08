@@ -19,18 +19,27 @@ public class PlayerInput : MonoBehaviour
     {
         float xDir = Input.GetAxis("Horizontal");
         
-        if(Input.GetButtonDown("Crouch")){
-            pCont.Crouch();
-        }
-        if(Input.GetButtonUp("Crouch")) {
-	        pCont.UnCrouch();
-        }
         if(!Input.GetButton("Jump")) {
 	        pCont.CancelJump();
         }
         if(Input.GetButtonDown("Jump") && currentJumps < maxJumps) {
             pCont.JumpUnconditionally();
             currentJumps++;
+            animator.SetTrigger("pJump");
+        }
+        if(pCont.landed) {
+            currentJumps = 0;
+            animator.SetTrigger("pLand");
+            animator.ResetTrigger("pJump");
+        } else {
+            animator.ResetTrigger("pLand");
+        }
+        if(xDir == 0) {
+            animator.SetBool("pIdle", true);
+            animator.SetBool("pRun", false);
+        } else {
+            animator.SetBool("pRun", true);
+            animator.SetBool("pIdle", false);
         }
         if(pCont.isGrounded){
             currentJumps = 0;
