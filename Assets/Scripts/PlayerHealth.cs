@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
-
+using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public CanvasGroup canvasGroup;
@@ -18,7 +18,12 @@ public class PlayerHealth : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col){
 
         if(col.tag == "Death"){
-            death = true;
+            if(PlayerStats.Life != 0){
+                death = true;
+                PlayerStats.Life -= 1;
+            } else {
+                SceneManager.LoadScene("Dead");
+            }
         }
     }
     // Update is called once per frame
