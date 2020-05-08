@@ -43,6 +43,9 @@ public class PlayerInput : MonoBehaviour
         }
         if(pCont.isGrounded){
             currentJumps = 0;
+            animator.ResetTrigger("pJump");
+        } else {
+            animator.SetTrigger("pJump");
         }
         pCont.Move(Input.GetAxis("Horizontal"));       
     }
