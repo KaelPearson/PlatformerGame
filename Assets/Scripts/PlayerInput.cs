@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    public int maxJumps = 2;
+    public int maxJumps = 1;
     int currentJumps = 0;
     public PlayerController pCont;
     public Animator animator;
