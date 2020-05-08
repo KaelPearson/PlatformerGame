@@ -25698,6 +25698,7 @@ GameObject:
   - component: {fileID: 489752419}
   - component: {fileID: 489752422}
   - component: {fileID: 489752423}
+  - component: {fileID: 489752424}
   m_Layer: 0
   m_Name: Snakey
   m_TagString: Death
@@ -25831,6 +25832,25 @@ MonoBehaviour:
   distance: 8
   renderer: {fileID: 489752420}
   linearSpeed: 1
+--- !u!95 &489752424
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489752418}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6a00a18ff0c7c6242ad268cc4c26bfa6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &498440979
 GameObject:
   m_ObjectHideFlags: 0

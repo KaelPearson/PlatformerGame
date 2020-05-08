@@ -7107,7 +7107,6 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-<<<<<<< HEAD
   - first: {x: 226, y: -28, z: 0}
     second:
       m_TileIndex: 8
@@ -10438,8 +10437,6 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-=======
->>>>>>> 2e96a79dfbda829fb43630cd8dc14953e36f3074
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 1
