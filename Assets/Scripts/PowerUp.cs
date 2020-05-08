@@ -9,6 +9,7 @@ public class PowerUp : MonoBehaviour
     bool jumpIncrease = false;
     void OnTriggerEnter2D(){
         PlayerStats.MaxJumps = 1;
+        time = 0;
         jumpIncrease = true;
     }
     void Update(){
