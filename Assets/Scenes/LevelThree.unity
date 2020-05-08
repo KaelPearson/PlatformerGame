@@ -7172,6 +7172,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PowerUp (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5610844959735219053, guid: f8949dca594a1164c88e68b743591d97,
+        type: 3}
+      propertyPath: powerUpText
+      value: 
+      objectReference: {fileID: 1050532930}
     - target: {fileID: 5610844959735219054, guid: f8949dca594a1164c88e68b743591d97,
         type: 3}
       propertyPath: m_LocalPosition.x
