@@ -16,4 +16,12 @@
             life = value;
         }
     }
+    private static int maxJumps = 0;
+    public static int MaxJumps{
+        get {
+            return maxJumps;
+        } set {
+            maxJumps = value;
+        }
+    }
 }

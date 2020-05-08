@@ -16,7 +16,7 @@ public class UpdateText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        lifes.text = "Lifes: " + PlayerStats.Life;
+        lifes.text = "Lives: " + PlayerStats.Life;
         coins.text = "Coins: " + PlayerStats.Coin;
     }
 }

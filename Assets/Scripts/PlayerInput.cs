@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    public int maxJumps = 1;
+    public int maxJumps = 0;
     int currentJumps = 0;
     public PlayerController pCont;
     public Animator animator;
@@ -17,12 +17,16 @@ public class PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        maxJumps = PlayerStats.MaxJumps;
         float xDir = Input.GetAxis("Horizontal");
         
         if(!Input.GetButton("Jump")) {
 	        pCont.CancelJump();
         }
-        if(Input.GetButtonDown("Jump") && currentJumps < maxJumps) {
+        if(Input.GetButtonDown("Jump") && pCont.isGrounded){
+            pCont.Jump();
+            animator.SetTrigger("pJump");
+        } else if (Input.GetButtonDown("Jump") && pCont.isGrounded == false && currentJumps < maxJumps){
             pCont.JumpUnconditionally();
             currentJumps++;
             animator.SetTrigger("pJump");
