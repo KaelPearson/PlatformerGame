@@ -7,6 +7,7 @@ public class PlayerInput : MonoBehaviour
     public int maxJumps = 0;
     int currentJumps = 0;
     public PlayerController pCont;
+    public GameObject particle;
     public Animator animator;
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,10 @@ public class PlayerInput : MonoBehaviour
 	        pCont.CancelJump();
         }
         if(Input.GetButtonDown("Jump") && pCont.isGrounded){
-            pCont.Jump();
+            pCont.JumpUnconditionally();
+            GameObject e = Instantiate(particle, transform.position, transform.rotation);
+
+            currentJumps++;
             animator.SetTrigger("pJump");
         } else if (Input.GetButtonDown("Jump") && pCont.isGrounded == false && currentJumps < maxJumps){
             pCont.JumpUnconditionally();

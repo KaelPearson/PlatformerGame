@@ -20,6 +20,7 @@ public class PowerUp : MonoBehaviour
                 jumpIncrease = false;
                 powerUpText.text = "";
             } else {
+                PlayerStats.MaxJumps = 1;
                 powerUpText.text = "Doublejump time remaining: " + (int)(5 - time);
                 time += Time.deltaTime;
             }

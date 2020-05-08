@@ -17,6 +17,9 @@ public class LevelSwitch : MonoBehaviour
             SceneManager.LoadScene(level);
         }
     }
+    public void startGame(string level1){
+        SceneManager.LoadScene(level1);
+    }
     // Update is called once per frame
     void Update()
     {

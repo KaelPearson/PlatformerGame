@@ -189,6 +189,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxJumps: 1
   pCont: {fileID: 6782497871391342893}
+  particle: {fileID: 7958729309961849668, guid: dc993f6b37bf6a8458fdc300df2414b0,
+    type: 3}
   animator: {fileID: 7462053072242543365}
 --- !u!95 &7462053072242543365
 Animator:
@@ -221,4 +223,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5d354bd258a0054eae2d4772fd1e599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 0}
   spawnPosition: {x: 0, y: 0, z: 0}

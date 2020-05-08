@@ -919,7 +919,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The chest is a checkpoint!
+  m_Text: This arrow is a double jump powerup!
 --- !u!222 &1092077607
 CanvasRenderer:
   m_ObjectHideFlags: 0
