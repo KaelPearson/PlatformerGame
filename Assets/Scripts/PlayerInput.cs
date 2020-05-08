@@ -31,26 +31,9 @@ public class PlayerInput : MonoBehaviour
         if(Input.GetButtonDown("Jump") && currentJumps < maxJumps) {
             pCont.JumpUnconditionally();
             currentJumps++;
-            animator.SetTrigger("pJump");
         }
-
-        // -----
-
-        if(pCont.landed) {
+        if(pCont.isGrounded){
             currentJumps = 0;
-            animator.SetTrigger("pLand");
-        } else {
-            animator.ResetTrigger("pLand");
-        }
-        if(xDir == 0) {
-            animator.SetBool("pIdle", true);
-            animator.SetBool("pRun", false);
-        } else {
-            animator.SetBool("pRun", true);
-            animator.SetBool("pIdle", false);
-        }
-        if(Input.GetKeyDown("j")) {
-            animator.SetTrigger("pAttack");	
         }
         pCont.Move(Input.GetAxis("Horizontal"));       
     }
