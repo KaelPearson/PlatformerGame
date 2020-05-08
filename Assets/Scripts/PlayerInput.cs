@@ -41,6 +41,7 @@ public class PlayerInput : MonoBehaviour
             animator.SetBool("pRun", true);
             animator.SetBool("pIdle", false);
         }
+        
         if(pCont.isGrounded){
             currentJumps = 0;
             animator.ResetTrigger("pJump");

@@ -21,16 +21,6 @@ public class PlayerHealth : MonoBehaviour
             death = true;
         }
     }
-    void die(){
-        float time = Time.time + 5;
-        while(time > 0){
-            time -= Time.deltaTime;
-        }
-        
-        canvasGroup.alpha = 0f;
-        canvasGroup.blocksRaycasts = false;
-        transform.position = spawnPosition;
-    }
     // Update is called once per frame
     void Update()
     {
@@ -38,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
             canvasGroup.alpha = 1f;
             canvasGroup.blocksRaycasts = true;
             transform.position = spawnPosition;
-            if(time > 5){  
+            if(time > 1){  
                 death = false;
                 canvasGroup.alpha = 0f;
                 canvasGroup.blocksRaycasts = false;
